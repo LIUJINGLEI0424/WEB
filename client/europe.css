@@ -13,7 +13,7 @@ body {
   font-size: 16.25px;
   color: #333;
   position: relative;
-  width: 1300px;
+  width: 90%;
   box-shadow: 0 0 30px #030238;
   margin-left: auto;
   margin-right: auto;
@@ -122,30 +122,38 @@ a.delete:hover {
   color: #F6D657;
 }
 #map { 
-  height: 550px; 
-  width: 830px; 
+  position: absolute;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  height: 67%; 
+  width: 62%; 
   border: 3px solid #fff;
-  left: 200px;
+  left: 17.5%;
+  right: 20.5%;
 }
 #country_data {
-  position: fixed;
-  width:200px;
-  right:57px;
-  top: 280px;
-  margin-right: 25px;
+  padding: 10px;
+  position: absolute;
+  overflow: hidden; 
+  width: 10%;
+  margin-left: 10%;
+  right: 0.8%;
+  margin-top: 1%;
 }
 #selectchoice_field {
+  padding: 10px;
   text-align: center;
-  width: 165px;
-  position: fixed;
-  top: 250px;
-  left: 55px;
-  margin-left: 25px;
+  width: 12.7%;
+  position: absolute;
+  margin-top: 1%;
+  left: 0.8%;
+  right: 90%;
   text-align: center;
   color: #F6D657;
 
 }
 #select_type {
+  border-radius: 10px;
   margin: 10px;
   background: #fff;
   border: 3px #fff;
@@ -155,22 +163,23 @@ a.delete:hover {
 
 }
 #pays_select_field {
-  width: 165px;
-  position: fixed;
-  top: 400px;
-  left: 55px;
-  margin-left: 25px;
-  margin-right: 10px;
+  padding: 10px;
+  width: 10%;
+  position: absolute;
+  margin-top: 13%;
+  left: 0.8%;
+  right: 90%;
   text-align: center;
   font-size: 100%;
   color: #F6D657;
 }
 #searchbar{
-  width: 165px;
-  position: fixed;
-  top: 400px;
-  left: 55px;
-  margin-left: 25px;
+  padding: 10px;
+  width: 12.7%;
+  position: absolute;
+  margin-top: 13%;
+  left: 0.8%;
+  right: 90%;
   text-align: center;
   color: #F6D657;
 }
