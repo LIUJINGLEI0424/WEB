@@ -34,7 +34,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
 
     # méthode pour traiter les requêtes HEAD
   def do_HEAD(self):
-      self.send_static()
+      self.send_static（）
 
 
   # méthode pour traiter les requêtes POST - non utilisée dans l'exemple
