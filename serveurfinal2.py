@@ -96,7 +96,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
     c = conn.cursor()
     
     # récupération de la liste des pays dans la base
-    c.execute("SELECT * FROM countries")
+    c.execute('SELECT * FROM countries JOIN datas on countries.wp = datas.wp')
     r = c.fetchall()
 
     # construction de la réponse
@@ -114,7 +114,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
   def send_country(self, country):
     # préparation de la requête SQL
     c = conn.cursor()
-    sql = 'SELECT * from countries WHERE wp=?'
+    sql = 'SELECT * from countries JOIN datas on countries.wp = datas.wp WHERE countries.wp=?'
 
     # récupération de l'information (ou pas)
     c.execute(sql,(country,))
@@ -133,7 +133,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
       attributs["longitude"] = r['longitude']
       attributs["wp"] = country
       attributs["pop"] = str(r['population'])+" hab."
-      attributs["superficie"] = str(r['superficie'])+" km2"
+      attributs["superficie"] = str(r['surface'])+" km2"
       attributs["drapeau"] = 'flags/' + r['drapeau']
       attributs["monnaie"] = r['monnaie']
       attributs["PIB"]= r['PIB']
@@ -165,7 +165,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
 #
 # Ouverture d'une connexion avec la base de données
 #
-conn = sqlite3.connect('pays2.sqlite')
+conn = sqlite3.connect('Europe.sqlite')
 
 # Pour accéder au résultat des requêtes sous forme d'un dictionnaire
 conn.row_factory = sqlite3.Row
