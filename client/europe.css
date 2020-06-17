@@ -8,7 +8,7 @@ body {
   border: 1px solid transparent;
   box-sizing: border-box;
   background: #223865;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Georgia', serif;
   font-weight: 300;
   font-size: 16.25px;
   color: #333;
@@ -25,6 +25,7 @@ h1 {
   text-align: center;
   text-decoration: none;
   font-size: 220%;
+  font-family: 'Verdana', sans-serif;
   border: none;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -32,39 +33,44 @@ h1 {
   background-repeat: no-repeat;
   background-size: 100% 180%;
   background-position: 50% 35%;
-  padding: 37px 37px;
+  padding: 47px 47px;
   border-bottom: 7px solid #fff;
   border-top: 7px solid #fff;
+  margin-bottom: 30px;
 }
 
 /* contenu de la page */
-body > * {   padding-left: 10px; }
+body > * {   
+  padding-left: 10px; 
+}
 
 /* polices de caractères */
-body { font-family: Calibri, sans-serif; }
+body { 
+  font-family: 'Georgia', serif; 
+  color: #fff;
+  font-size: 13px;
+}
 
 /* positionnement des champs */
 label { display: block; }
 label span { display: inline-block; width: 5em; height: 1.5em; }
 
 a.delete:hover {
-  color: red;
+  color: #F6D657;
 }
-#map { height: 400px; width: 600px; }
 
 legend {
-  font-size: 150%;
+  font-size: 100%;
+  text-align: center;
   font-weight: bold;
-  font-family: 'Assistant', sans-serif;
-  color: DarkSlateGray;
+  font-family: 'Georgia', serif;
+  color: #F6D657;
 }
 
 fieldset {
-  border: 2px outset black;
-  border-radius: 3px;
-  box-shadow: 5px 5px 3px SlateGray;
-  font-size: 150%;
-  background-color: Silver;
+  border: 3px solid #fff;
+  font-size: 100%;
+  background-color: #223865;
 }
 
 table {
@@ -72,16 +78,16 @@ table {
 }
 
 span[id=country_name] {
-  font-size: 120%;
-  color: black;
+  font-size: 100%;
+  color: #F6D657;
 }
 
 button {
   width:110px;
   padding:6px 0 6px 0;
-  font:Bold 13px Arial;
-  background:#d34836;
-  color:#fff;
+  font:Bold 12px 'Georgia';
+  background: #fff;
+  color:#223865;
   border-radius:4px;
   border:none;
   transition: all 0.3s ease 0s;
@@ -90,56 +96,81 @@ button {
 }
 
 button:hover {
-  background:red;
-  box-shadow: 0 0 10px black;
+  color:#223865;
+  background:#F6D657;
+  box-shadow: 0 0 10px #030238;
   transition: all 0.3s ease 0s;
 }
 
+ /* unvisited link */
+a:link {
+  color: #F6D657;
+}
+
+/* visited link */
+a:visited {
+  color: #F6D657;
+}
+
+/* mouse over link */
+a:hover {
+  color: #fff;
+}
+
+
 a.delete:hover {
-  color: red;
+  color: #F6D657;
 }
 #map { 
-  height: 575px; 
-  width: 1000px; 
-  border: 3px solid black;
+  height: 550px; 
+  width: 830px; 
+  border: 3px solid #fff;
+  left: 200px;
 }
 #country_data {
-  width:500px;
+  position: fixed;
+  width:200px;
+  right:55px;
+  top: 280px;
+  margin-right: 25px;
 }
 #selectchoice_field {
-  width: 200px;
+  text-align: center;
+  width: 165px;
   position: fixed;
-  top: 140px;
-  right: 20px;
-  text-align: : center;
-  color: DarkSlateGrey;
+  top: 250px;
+  left: 55px;
+  margin-left: 25px;
+  text-align: center;
+  color: #F6D657;
 
 }
 #select_type {
-  margin: 3px;
-  background: White;
-  border: 3px black;
+  margin: 10px;
+  background: #fff;
+  border: 3px #fff;
   border-radius: 3px;
-  color: DarkSlateGrey;
+  color: #223865;
 
 
 }
 #pays_select_field {
-  width: 200px;
+  width: 165px;
   position: fixed;
-  top: 270px;
-  right: 20px;
+  top: 400px;
+  left: 55px;
+  margin-left: 25px;
+  margin-right: 10px;
   text-align: center;
-  margin: 3px;
-  font-size: 150%;
-  color: DarkSlateGrey;
+  font-size: 100%;
+  color: #F6D657;
 }
 #searchbar{
-  width: 200px;
+  width: 165px;
   position: fixed;
-  top: 270px;
-  right: 20px;
+  top: 400px;
+  left: 55px;
+  margin-left: 25px;
   text-align: center;
-  margin: 3px;
-  color: DarkSlateGrey;
+  color: #F6D657;
 }
